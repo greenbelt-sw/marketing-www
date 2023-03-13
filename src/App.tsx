@@ -1,4 +1,4 @@
-import { ChakraProvider } from "@chakra-ui/react";
+import { Box, ChakraProvider } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
 import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
@@ -24,14 +24,16 @@ export const App = () => {
   }, []);
   return (
     <ChakraProvider theme={theme}>
-      <Header dark={darkNav} />
-      {(hashtag === "" ||
-        hashtag === "#" ||
-        (!hashtag.startsWith("#contact") &&
-          !hashtag.startsWith("#learn-more"))) && <Home />}
-      {hashtag.startsWith("#contact") && <Contact />}
-      {hashtag.startsWith("#learn-more") && <LearnMore />}
-      <Footer />
+      <Box maxW={"100vw"} overflow={"hidden"}>
+        <Header dark={darkNav} />
+        {(hashtag === "" ||
+          hashtag === "#" ||
+          (!hashtag.startsWith("#contact") &&
+            !hashtag.startsWith("#learn-more"))) && <Home />}
+        {hashtag.startsWith("#contact") && <Contact />}
+        {hashtag.startsWith("#learn-more") && <LearnMore />}
+        <Footer />
+      </Box>
     </ChakraProvider>
   );
 };

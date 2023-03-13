@@ -20,14 +20,18 @@ export default function BasicAbout() {
     >
       <Container maxW={"container.lg"} py={20} justifyItems={"center"}>
         <SimpleGrid columns={5} rowGap={20}>
-          <GridItem colSpan={3} alignItems={"center"} display={"flex"}>
+          <GridItem
+            colSpan={{ base: 4, sm: 3 }}
+            alignItems={"center"}
+            display={"flex"}
+          >
             <LeftBox>
               <Heading size={"lg"} lineHeight={10}>
                 for one reason or another, goods are returned to retailers
               </Heading>
             </LeftBox>
           </GridItem>
-          <GridItem colSpan={2}>
+          <GridItem colSpan={{ base: 1, sm: 2 }}>
             <RightBox>
               <Image
                 src={process.env.PUBLIC_URL + "/img/notreceived.png"}
@@ -37,7 +41,7 @@ export default function BasicAbout() {
               />
             </RightBox>
           </GridItem>
-          <GridItem colSpan={2}>
+          <GridItem colSpan={{ base: 1, sm: 2 }}>
             <LeftBox>
               <Image
                 src={process.env.PUBLIC_URL + "/img/vehicle.png"}
@@ -47,7 +51,11 @@ export default function BasicAbout() {
               />
             </LeftBox>
           </GridItem>
-          <GridItem colSpan={3} alignItems={"center"} display={"flex"}>
+          <GridItem
+            colSpan={{ base: 4, sm: 3 }}
+            alignItems={"center"}
+            display={"flex"}
+          >
             <RightBox>
               <Heading size={"lg"} lineHeight={10}>
                 <Text display={"inline-block"} color={"green.500"}>

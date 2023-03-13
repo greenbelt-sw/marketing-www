@@ -21,22 +21,18 @@ export default function Cover() {
             <GridItem colSpan={{ base: 7, md: 4 }}>
               <Stack>
                 <LeftBox>
-                  <Heading color={"gray.700"}>
-                    <Text display={"inline-block"} color={"green.500"}>
-                      greenbelt
-                    </Text>{" "}
-                    is rethinking consumer returns
-                  </Heading>
+                  <Heading color={"green.500"}>greenbelt</Heading>
                 </LeftBox>
-                <BounceBox>
-                  <Text color={"gray.700"}>
-                    greenbelt is a socially responsible organization that
-                    redirects retail return volume to local charities, unlocking
-                    new value for retailers while reducing environmental impacts
-                    and providing goods to those in need. Our innovative
-                    approach benefits both businesses and communities.
-                  </Text>
-                </BounceBox>
+                <Heading color={"gray.700"}>
+                  rethinking consumer returns
+                </Heading>
+                <Text color={"gray.700"}>
+                  greenbelt is a socially responsible organization that
+                  redirects retail return volume to local charities, unlocking
+                  new value for retailers while reducing environmental impacts
+                  and providing goods to those in need. Our innovative approach
+                  benefits both businesses and communities.
+                </Text>
               </Stack>
             </GridItem>
             <GridItem colSpan={3} display={{ base: "none", md: "block" }}>
