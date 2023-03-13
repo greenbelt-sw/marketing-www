@@ -7,7 +7,7 @@ interface HeaderProps {
 export default function Header({ dark }: HeaderProps) {
   return (
     <Box
-      backgroundColor={dark ? "green.500" : "rgba(255,255,255,.8)"}
+      backgroundColor={dark ? "rgb(26,131,75, .8)" : "rgba(255,255,255, .8)"}
       backdropFilter={"blur(5px)"}
       w={"100vw"}
       position={"fixed"}
@@ -30,7 +30,7 @@ export default function Header({ dark }: HeaderProps) {
             fontWeight={"700"}
             fontSize={"2xl"}
           >
-            <a href={"/"}>greenbelt</a>
+            <a href={"/greenbelt-client"}>greenbelt</a>
           </Text>
           <Stack
             direction={"row"}

@@ -23,8 +23,8 @@ export default function Form() {
         pt={5}
         bgColor={"white"}
       >
-        <Heading fontSize={"lg"} color={"gray.600"} pb={2}>
-          Contact Us
+        <Heading fontSize={"lg"} color={"gray.600"} pb={2} textAlign={"center"}>
+          We'd love to hear from you!
         </Heading>
         <Stack spacing={4}>
           <Flex>

@@ -6,13 +6,18 @@ import {
   Heading,
   Image,
   SimpleGrid,
+  Text,
 } from "@chakra-ui/react";
 import { BounceBox, LeftBox, RightBox } from "../../components/MotionBox";
 import Benefits from "./Benefits";
 
 export default function BasicAbout() {
   return (
-    <Box bgColor={"gray.100"} boxShadow={"inner"}>
+    <Box
+      bgGradient="linear(to-b, gray.100, green.100)"
+      boxShadow={"inner"}
+      id={"about-us"}
+    >
       <Container maxW={"container.lg"} py={20} justifyItems={"center"}>
         <SimpleGrid columns={5} rowGap={20}>
           <GridItem colSpan={3} alignItems={"center"} display={"flex"}>
@@ -45,8 +50,10 @@ export default function BasicAbout() {
           <GridItem colSpan={3} alignItems={"center"} display={"flex"}>
             <RightBox>
               <Heading size={"lg"} lineHeight={10}>
-                greenbelt redirects damaged and designated goods to local
-                charities
+                <Text display={"inline-block"} color={"green.500"}>
+                  greenbelt
+                </Text>{" "}
+                redirects damaged and designated goods to local charities
               </Heading>
             </RightBox>
           </GridItem>
@@ -58,7 +65,7 @@ export default function BasicAbout() {
               </Heading>
             </BounceBox>
           </GridItem>
-          <GridItem colSpan={5}>
+          <GridItem colSpan={5} justifyContent={"center"}>
             <Benefits />
           </GridItem>
           <GridItem colSpan={5} display={"flex"} justifyContent={"center"}>
@@ -69,6 +76,7 @@ export default function BasicAbout() {
               as={"a"}
               href={"#learn-more"}
               size={"lg"}
+              shadow={"lg"}
             >
               learn more
             </Button>

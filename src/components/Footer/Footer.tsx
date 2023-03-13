@@ -18,7 +18,7 @@ const Logo = (props: any) => {
   return (
     <Flex flex={{ base: 1 }} justify={{ base: "center", md: "start" }}>
       <Text as={"h1"} fontWeight={"700"}>
-        <a href={"/"}>greenbelt</a>
+        <a href={"/greenbelt-client"}>greenbelt</a>
       </Text>
     </Flex>
   );
@@ -72,9 +72,9 @@ export default function Footer() {
       >
         <Logo />
         <Stack direction={"row"} spacing={6}>
-          <Link href={"#"}>home</Link>
-          <Link href={"#"}>about</Link>
-          <Link href={"#"}>learn more</Link>
+          <Link href={"/greenbelt-client"}>home</Link>
+          <Link href={"#about-us"}>about us</Link>
+          <Link href={"#learn-more"}>learn more</Link>
           <Link href={"#contact"}>contact</Link>
         </Stack>
       </Container>
@@ -98,10 +98,10 @@ export default function Footer() {
             reserved
           </Text>
           <Stack direction={"row"} spacing={6}>
-            <SocialButton label={"Email"} href={"#"}>
+            <SocialButton label={"Email"} href={"#contact"}>
               <EmailIcon />
             </SocialButton>
-            <SocialButton label={"Phone"} href={"#"}>
+            <SocialButton label={"Phone"} href={"#contact"}>
               <PhoneIcon />
             </SocialButton>
           </Stack>

@@ -4,10 +4,10 @@ import Profile from "./Profile";
 
 export default function Contact() {
   return (
-    <Box bgColor={"gray.100"}>
+    <Box bgColor={"gray.100"} bgGradient="linear(to-b, gray.100, gray.200)">
       <Container maxW={"container.lg"} py={20}>
-        <Form />
         <Profile />
+        <Form />
       </Container>
     </Box>
   );

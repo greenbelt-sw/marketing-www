@@ -98,7 +98,7 @@ export default function PartnerFeatures() {
             heading={"98%"}
             icon={<Icon as={FcDonate} w={10} h={10} />}
             description={
-              "of revenue dedicated to its charitable program of distributing apparel, accessories, shoes, home furnishings, toys, books and other useful items."
+              "of revenue dedicated to its charitable program of distributing apparel, accessories, shoes, books and other useful items."
             }
             href={"https://www.delivering-good.org/about-us/"}
             delay={0.3}

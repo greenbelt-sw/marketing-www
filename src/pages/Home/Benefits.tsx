@@ -100,9 +100,9 @@ const TestimonialAvatar = ({
 
 export default function Benefits() {
   return (
-    <Box bg={useColorModeValue("gray.100", "gray.700")}>
+    <Box>
       <Container maxW={"container.lg"} as={Stack} spacing={12}>
-        <Stack direction={"row"}>
+        <Stack direction={"row"} justifyContent={"center"}>
           <BounceBoxDelay noOfLines={0.1}>
             <Testimonial>
               <TestimonialContent>
@@ -123,8 +123,8 @@ export default function Benefits() {
               <TestimonialContent>
                 <TestimonialHeading>Eco Friendly</TestimonialHeading>
                 <TestimonialText>
-                  Around 17% of retail orders were returned in 2022, causing
-                  notable financial & environmental impacts.
+                  Around <b>17% of retail orders</b> were returned in 2022,
+                  causing notable financial & environmental impacts.
                 </TestimonialText>
               </TestimonialContent>
               <TestimonialAvatar

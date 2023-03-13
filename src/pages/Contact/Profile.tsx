@@ -8,6 +8,7 @@ import {
   Stack,
   Text,
 } from "@chakra-ui/react";
+import { RightBox } from "../../components/MotionBox";
 
 export default function Profile() {
   return (
@@ -21,14 +22,23 @@ export default function Profile() {
         bgColor={"white"}
       >
         <Stack spacing={4}>
-          <Flex justifyContent={"space-between"}>
-            <Avatar
-              src={process.env.PUBLIC_URL + "/img/aaron.jpeg"}
-              size={"xl"}
-              border={"4px solid #e9e9e9"}
-            />
+          <Flex justifyContent={"center"}>
             <Stack alignItems={"center"}>
-              <Heading>Chat with Aaron 👋</Heading>
+              <Avatar
+                src={process.env.PUBLIC_URL + "/img/aaron.jpeg"}
+                size={"xl"}
+                border={"2px solid #e9e9e9"}
+                shadow={"lg"}
+              />
+              <Heading>
+                <Text display={"inline-block"} opacity={0}>
+                  👋
+                </Text>{" "}
+                Chat with Aaron{" "}
+                <Text display={"inline-block"}>
+                  <RightBox>👋</RightBox>
+                </Text>
+              </Heading>
               <Flex>
                 <Text
                   fontFamily={"mono"}
@@ -55,13 +65,11 @@ export default function Profile() {
                 </Text>
               </Flex>
             </Stack>
-            <Avatar opacity={0} size={"xl"} />
           </Flex>
           <Text>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book.
+            Hi, I'm Aaron! If you're interested in learning more about greenbelt
+            or want to discuss potential collaboration opportunities, I'd love
+            to chat!
           </Text>
         </Stack>
       </Container>
