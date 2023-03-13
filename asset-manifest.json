@@ -1,0 +1,12 @@
+{
+  "files": {
+    "main.css": "/greenbelt-client/static/css/main.f400bcd4.css",
+    "main.js": "/greenbelt-client/static/js/main.f3f4e4b5.js",
+    "index.html": "/greenbelt-client/index.html",
+    "main.f3f4e4b5.js.map": "/greenbelt-client/static/js/main.f3f4e4b5.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f400bcd4.css",
+    "static/js/main.f3f4e4b5.js"
+  ]
+}
