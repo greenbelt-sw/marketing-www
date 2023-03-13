@@ -18,7 +18,7 @@ export default function Cover() {
       <Container maxW={"container.lg"} minH={"80vh"} pt={10}>
         <Flex flexDir={"column"} justifyContent={"space-around"} h={"80vh"}>
           <SimpleGrid columns={7}>
-            <GridItem colSpan={4}>
+            <GridItem colSpan={{ base: 7, md: 4 }}>
               <Stack>
                 <LeftBox>
                   <Heading color={"gray.700"}>
@@ -39,7 +39,7 @@ export default function Cover() {
                 </BounceBox>
               </Stack>
             </GridItem>
-            <GridItem colSpan={3}>
+            <GridItem colSpan={3} display={{ base: "none", md: "block" }}>
               <BounceBox>
                 <Image
                   src={process.env.PUBLIC_URL + "/img/vehicle.png"}

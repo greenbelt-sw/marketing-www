@@ -22,13 +22,15 @@ export default function Header({ dark }: HeaderProps) {
         borderColor={"gray.200"}
         align={"center"}
       >
-        <Flex flex={{ base: 1 }} justify={{ base: "center", md: "start" }}>
+        <Flex flex={{ base: 1 }} justify={"start"}>
           <Text
             as={"h1"}
             color={dark ? "gray.100" : "green.500"}
             fontFamily={"Poppins"}
             fontWeight={"700"}
             fontSize={"2xl"}
+            display={"flex"}
+            alignItems={"center"}
           >
             <a href={"/greenbelt-client"}>greenbelt</a>
           </Text>
@@ -38,22 +40,17 @@ export default function Header({ dark }: HeaderProps) {
             ml={10}
             spacing={5}
             color={dark ? "gray.100" : "green.800"}
+            display={{ base: "none", md: "inline-flex" }}
           >
             <Link href={"#about-us"}>about us</Link>
             <Link href={"#learn-more"}>learn more</Link>
           </Stack>
         </Flex>
-        <Stack
-          flex={{ base: 1, md: 0 }}
-          justify={"flex-end"}
-          direction={"row"}
-          spacing={6}
-        >
+        <Stack justify={"flex-end"} direction={"row"} spacing={6}>
           {dark ? undefined : (
             <Button
               as={"a"}
               rounded={"full"}
-              display={{ base: "none", md: "inline-flex" }}
               fontSize={"sm"}
               fontWeight={600}
               color={dark ? "gray.800" : "white"}

@@ -1,17 +1,9 @@
-import {
-  Box,
-  Heading,
-  Text,
-  Stack,
-  Container,
-  useColorModeValue,
-  Image,
-} from "@chakra-ui/react";
+import { Box, Heading, Text, Stack, Container, Image } from "@chakra-ui/react";
 import PartnerFeatures from "./PartnerFeatures";
 
 export default function Partners() {
   return (
-    <Box bg={useColorModeValue("green.500", "gray.700")} boxShadow={"inner"}>
+    <Box bg={"green.500"} boxShadow={"inner"}>
       <Container
         maxW={"7xl"}
         py={16}
@@ -28,7 +20,7 @@ export default function Partners() {
               width={"100%"}
             />
           </Container>
-          <Text w={"40%"} textAlign={"center"}>
+          <Text w={{ base: "90%", md: "50%" }} textAlign={"center"}>
             greenbelt is partnered with Delivering Good and their network of
             charities to find the right home for consumer returns
           </Text>

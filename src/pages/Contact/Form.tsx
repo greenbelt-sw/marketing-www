@@ -1,4 +1,4 @@
-import { EmailIcon, PlusSquareIcon } from "@chakra-ui/icons";
+import { ChatIcon, EmailIcon, PlusSquareIcon } from "@chakra-ui/icons";
 import {
   Box,
   Button,
@@ -55,7 +55,8 @@ export default function Form() {
             }}
             w={"fit-content"}
           >
-            Send
+            <ChatIcon />
+            &nbsp;Send
           </Button>
         </Stack>
       </Container>

@@ -6,8 +6,9 @@ import {
   Text,
   Stack,
   Container,
-  useColorModeValue,
   Icon,
+  SimpleGrid,
+  GridItem,
 } from "@chakra-ui/react";
 import {
   FcBusinessman,
@@ -23,7 +24,7 @@ const Testimonial = ({ children }: { children: ReactNode }) => {
 const TestimonialContent = ({ children }: { children: ReactNode }) => {
   return (
     <Stack
-      bg={useColorModeValue("white", "gray.800")}
+      bg={"white"}
       boxShadow={"lg"}
       p={8}
       rounded={"xl"}
@@ -39,12 +40,13 @@ const TestimonialContent = ({ children }: { children: ReactNode }) => {
         borderRightWidth: 16,
         borderTop: "solid",
         borderTopWidth: 16,
-        borderTopColor: useColorModeValue("white", "gray.800"),
+        borderTopColor: "white",
         pos: "absolute",
         bottom: "-16px",
         left: "50%",
         transform: "translateX(-50%)",
       }}
+      mx={2}
     >
       {children}
     </Stack>
@@ -61,11 +63,7 @@ const TestimonialHeading = ({ children }: { children: ReactNode }) => {
 
 const TestimonialText = ({ children }: { children: ReactNode }) => {
   return (
-    <Text
-      textAlign={"center"}
-      color={useColorModeValue("gray.600", "gray.400")}
-      fontSize={"sm"}
-    >
+    <Text textAlign={"center"} color={"gray.600"} fontSize={"sm"}>
       {children}
     </Text>
   );
@@ -87,7 +85,7 @@ const TestimonialAvatar = ({
         justify={"center"}
         color={"white"}
         rounded={"full"}
-        bg={useColorModeValue("gray.200", "gray.700")}
+        bg={"gray.200"}
       >
         {icon}
       </Flex>
@@ -102,53 +100,60 @@ export default function Benefits() {
   return (
     <Box>
       <Container maxW={"container.lg"} as={Stack} spacing={12}>
-        <Stack direction={"row"} justifyContent={"center"}>
-          <BounceBoxDelay noOfLines={0.1}>
-            <Testimonial>
-              <TestimonialContent>
-                <TestimonialHeading>Cost Friendly</TestimonialHeading>
-                <TestimonialText>
-                  greenbelt's latest engagement targeted a <b>23% reduction</b>{" "}
-                  in quarterly return costs for an apparel retailer
-                </TestimonialText>
-              </TestimonialContent>
-              <TestimonialAvatar
-                icon={<Icon as={FcBusinessman} w={10} h={10} />}
-                name={"Benefitting the Company"}
-              />
-            </Testimonial>
-          </BounceBoxDelay>
-          <BounceBoxDelay noOfLines={0.3}>
-            <Testimonial>
-              <TestimonialContent>
-                <TestimonialHeading>Eco Friendly</TestimonialHeading>
-                <TestimonialText>
-                  Around <b>17% of retail orders</b> were returned in 2022,
-                  causing notable financial & environmental impacts.
-                </TestimonialText>
-              </TestimonialContent>
-              <TestimonialAvatar
-                icon={<Icon as={FcChargeBattery} w={10} h={10} />}
-                name={"Benefitting the Environment"}
-              />
-            </Testimonial>
-          </BounceBoxDelay>
-          <BounceBoxDelay noOfLines={0.2}>
-            <Testimonial>
-              <TestimonialContent>
-                <TestimonialHeading>Resource Friendly</TestimonialHeading>
-                <TestimonialText>
-                  Around <b>$200 billion</b> worth of merchandise are destroyed
-                  each year. greenbelt helps to reduce this number.
-                </TestimonialText>
-              </TestimonialContent>
-              <TestimonialAvatar
-                icon={<Icon as={FcPodiumWithSpeaker} w={10} h={10} />}
-                name={"Benefitting the Community"}
-              />
-            </Testimonial>
-          </BounceBoxDelay>
-        </Stack>
+        <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }}>
+          <GridItem mb={5}>
+            <BounceBoxDelay noOfLines={0.1} w={"fit-content"} m={"auto"}>
+              <Testimonial>
+                <TestimonialContent>
+                  <TestimonialHeading>Cost Friendly</TestimonialHeading>
+                  <TestimonialText>
+                    greenbelt's latest engagement targeted a{" "}
+                    <b>23% reduction</b> in quarterly return costs for an
+                    apparel retailer
+                  </TestimonialText>
+                </TestimonialContent>
+                <TestimonialAvatar
+                  icon={<Icon as={FcBusinessman} w={10} h={10} />}
+                  name={"Benefitting the Company"}
+                />
+              </Testimonial>
+            </BounceBoxDelay>
+          </GridItem>
+          <GridItem mb={5}>
+            <BounceBoxDelay noOfLines={0.3} w={"fit-content"} m={"auto"}>
+              <Testimonial>
+                <TestimonialContent>
+                  <TestimonialHeading>Eco Friendly</TestimonialHeading>
+                  <TestimonialText>
+                    Around <b>17% of retail orders</b> were returned in 2022,
+                    causing notable financial & environmental impacts.
+                  </TestimonialText>
+                </TestimonialContent>
+                <TestimonialAvatar
+                  icon={<Icon as={FcChargeBattery} w={10} h={10} />}
+                  name={"Benefitting the Environment"}
+                />
+              </Testimonial>
+            </BounceBoxDelay>
+          </GridItem>
+          <GridItem>
+            <BounceBoxDelay noOfLines={0.2} w={"fit-content"} m={"auto"}>
+              <Testimonial>
+                <TestimonialContent>
+                  <TestimonialHeading>Resource Friendly</TestimonialHeading>
+                  <TestimonialText>
+                    Around <b>$200 billion</b> worth of merchandise are
+                    destroyed each year. greenbelt helps to reduce this number.
+                  </TestimonialText>
+                </TestimonialContent>
+                <TestimonialAvatar
+                  icon={<Icon as={FcPodiumWithSpeaker} w={10} h={10} />}
+                  name={"Benefitting the Community"}
+                />
+              </Testimonial>
+            </BounceBoxDelay>
+          </GridItem>
+        </SimpleGrid>
       </Container>
     </Box>
   );

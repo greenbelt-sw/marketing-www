@@ -86,6 +86,9 @@ export const RightBox = ({ children, ...props }: BoxProps) => {
         bounce: 0.35,
         duration: 0.75,
       }}
+      animate={{
+        rotate: props.noOfLines || 0,
+      }}
       {...props}
     >
       {children}

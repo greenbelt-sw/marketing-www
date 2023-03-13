@@ -31,15 +31,26 @@ export default function Profile() {
                 shadow={"lg"}
               />
               <Heading>
-                <Text display={"inline-block"} opacity={0}>
+                <Text
+                  display={{ base: "none", sm: "inline-block" }}
+                  opacity={0}
+                >
                   👋
                 </Text>{" "}
                 Chat with Aaron{" "}
                 <Text display={"inline-block"}>
-                  <RightBox>👋</RightBox>
+                  <RightBox
+                    noOfLines={360}
+                    display={{ base: "none", sm: "inline-block" }}
+                  >
+                    👋
+                  </RightBox>
                 </Text>
               </Heading>
-              <Flex>
+              <Flex
+                direction={{ base: "column", sm: "row" }}
+                alignItems={"center"}
+              >
                 <Text
                   fontFamily={"mono"}
                   p={1}
@@ -60,6 +71,7 @@ export default function Profile() {
                   rounded={"full"}
                   w={"fit-content"}
                   fontSize={"xs"}
+                  mt={{ base: 1, sm: 0 }}
                 >
                   <EmailIcon /> aaron@greenbelt.com
                 </Text>

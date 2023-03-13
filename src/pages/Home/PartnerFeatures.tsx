@@ -7,7 +7,6 @@ import {
   Icon,
   Stack,
   Text,
-  useColorModeValue,
 } from "@chakra-ui/react";
 import { ReactElement } from "react";
 import { FcConferenceCall, FcDonate, FcMoneyTransfer } from "react-icons/fc";
@@ -25,8 +24,7 @@ const Card = ({ heading, description, icon, href, delay }: CardProps) => {
   return (
     <BounceBoxDelay noOfLines={delay} shadow={"xl"} h={"max-content"}>
       <Box
-        maxW={{ base: "full", md: "275px" }}
-        w={"max-content"}
+        w={{ base: "full", md: "275px" }}
         borderWidth="1px"
         borderRadius="lg"
         overflow="hidden"
@@ -45,7 +43,7 @@ const Card = ({ heading, description, icon, href, delay }: CardProps) => {
             justify={"center"}
             color={"white"}
             rounded={"full"}
-            bg={useColorModeValue("gray.200", "gray.700")}
+            bg={"gray.200"}
           >
             {icon}
           </Flex>
@@ -74,7 +72,7 @@ const Card = ({ heading, description, icon, href, delay }: CardProps) => {
 export default function PartnerFeatures() {
   return (
     <Box p={4}>
-      <Container maxW={"5xl"}>
+      <Container maxW={"container.lg"}>
         <Flex flexWrap="wrap" gridGap={6} justify="center">
           <Card
             heading={"210th"}
