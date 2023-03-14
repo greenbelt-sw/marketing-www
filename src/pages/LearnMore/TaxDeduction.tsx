@@ -39,7 +39,7 @@ export default function TaxDeduction() {
                 }
               ></Box>
               <Heading fontSize={"lg"} textAlign={"center"}>
-                standard return process
+                standard returns process
               </Heading>
             </BounceBoxDelay>
           </GridItem>
