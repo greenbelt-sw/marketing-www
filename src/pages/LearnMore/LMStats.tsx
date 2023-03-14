@@ -72,14 +72,18 @@ export default function LMStats() {
             heading={"$816 Billion"}
             icon={<Icon as={FcConferenceCall} w={10} h={10} />}
             description={"returned retail merchandise"}
-            href={"https://www.delivering-good.org/corporate-partnerships/"}
+            href={
+              "https://www.forbes.com/sites/joanverdon/2022/12/14/816-billion-in-returns-expected-this-year-retail-group-reports/?sh=4f5920b65674"
+            }
             delay={0.1}
           />
           <Card
             heading={"25%"}
             icon={<Icon as={FcDonate} w={10} h={10} />}
             description={"of returns are destroyed"}
-            href={"https://www.delivering-good.org/about-us/"}
+            href={
+              "https://www.theatlantic.com/magazine/archive/2021/11/free-returns-online-shopping/620169/"
+            }
             delay={0.2}
           />
         </Flex>
@@ -88,21 +92,27 @@ export default function LMStats() {
             heading={"6 Billion"}
             icon={<Icon as={FcConferenceCall} w={10} h={10} />}
             description={"pounds of landfill waste"}
-            href={"https://www.delivering-good.org/corporate-partnerships/"}
+            href={
+              "https://www.npr.org/2022/01/12/1072066943/from-living-rooms-to-landfills-some-holiday-shopping-returns-take-a-very-sad-pat/"
+            }
             delay={0.3}
           />
           <Card
             heading={"16 Million"}
             icon={<Icon as={FcMoneyTransfer} w={10} h={10} />}
             description={"tons of CO2 emissions"}
-            href={"https://www.delivering-good.org/about-us/"}
+            href={
+              "https://www.chargedretail.co.uk/2022/04/11/returns-are-costing-amazon-billions-of-dollars/"
+            }
             delay={0.4}
           />
           <Card
             heading={"~$200 Billion"}
             icon={<Icon as={FcDonate} w={10} h={10} />}
             description={"in destroyed merchandised"}
-            href={"https://www.delivering-good.org/about-us/"}
+            href={
+              "https://www.cnbc.com/2016/12/16/a-260-billion-ticking-time-bomb-the-costly-business-of-retail-returns.html"
+            }
             delay={0.5}
           />
         </Flex>

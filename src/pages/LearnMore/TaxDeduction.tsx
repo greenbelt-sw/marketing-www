@@ -53,17 +53,18 @@ export default function TaxDeduction() {
               <Heading>→</Heading>
             </BounceBoxDelay>
           </GridItem>
-          <GridItem colSpan={5} mx={5}>
+          <GridItem colSpan={5} mx={5} display={"flex"}>
             <BounceBoxDelay noOfLines={0.2}>
               <Box
                 w={100}
-                h={200}
+                h={160}
                 rounded={"lg"}
                 border={"4px solid #c7c7c7"}
                 background={
-                  "linear-gradient(to bottom, #ffffff 30%, #48BB78 30%, #48BB78 35%, #718096 35%, #718096 40%, #E2E8F0 40%)"
+                  "linear-gradient(to bottom, #48BB78 0%, #48BB78 8%, #718096 8%, #718096 15%, #E2E8F0 10%)"
                 }
                 m={"auto"}
+                mb={0}
               ></Box>
               <Heading fontSize={"lg"} textAlign={"center"}>
                 greenbelt return process
