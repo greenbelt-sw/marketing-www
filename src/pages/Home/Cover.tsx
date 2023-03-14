@@ -15,11 +15,14 @@ export default function Cover() {
   return (
     <Box
       bgImage={process.env.PUBLIC_URL + "/img/forest.webp"}
-      bgSize={"auto"}
+      bgSize={"contain"}
       backgroundPosition={"bottom"}
       bgRepeat={"no-repeat"}
     >
-      <Box bgGradient="linear(to-r, gray.100, gray.300)">
+      <Box
+        bgGradient="linear(to-r, rgba(237, 242, 247, .9), rgba(203, 213, 224, .9))"
+        backdropFilter={"blur(5px)"}
+      >
         <Container maxW={"container.lg"} minH={"80vh"} pt={10}>
           <Flex flexDir={"column"} justifyContent={"space-around"} h={"80vh"}>
             <SimpleGrid columns={7}>

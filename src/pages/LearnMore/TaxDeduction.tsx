@@ -17,7 +17,7 @@ export default function TaxDeduction() {
     >
       <Box
         bgGradient={
-          "linear(to-r, rgba(226, 232, 240, .6), rgba(237, 242, 247, 1), rgba(226, 232, 240, .6))"
+          "linear(to-r, rgba(226, 232, 240, .4), rgba(237, 242, 247, .9), rgba(226, 232, 240, .4))"
         }
         py={20}
       >
