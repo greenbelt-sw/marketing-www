@@ -57,7 +57,7 @@ export default function BasicAbout() {
             display={"flex"}
           >
             <RightBox>
-              <Heading size={"lg"} lineHeight={10}>
+              <Heading size={"lg"} lineHeight={10} textAlign={"right"}>
                 <Text display={"inline-block"} color={"green.500"}>
                   greenbelt
                 </Text>{" "}

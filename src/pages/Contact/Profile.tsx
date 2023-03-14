@@ -59,9 +59,14 @@ export default function Profile() {
                   rounded={"full"}
                   w={"fit-content"}
                   fontSize={"xs"}
-                  mr={1}
+                  mt={{ base: 1, sm: 0 }}
+                  as={"a"}
+                  href="mailto:aaron@greenbelt.com"
+                  _hover={{
+                    bgColor: "gray.200",
+                  }}
                 >
-                  <PhoneIcon /> 585-451-8105
+                  <EmailIcon /> aaron@greenbelt.com
                 </Text>
                 <Text
                   fontFamily={"mono"}
@@ -71,9 +76,14 @@ export default function Profile() {
                   rounded={"full"}
                   w={"fit-content"}
                   fontSize={"xs"}
-                  mt={{ base: 1, sm: 0 }}
+                  ml={1}
+                  as={"a"}
+                  href="tel:+1(585)451-8105"
+                  _hover={{
+                    bgColor: "gray.200",
+                  }}
                 >
-                  <EmailIcon /> aaron@greenbelt.com
+                  <PhoneIcon /> 585-451-8105
                 </Text>
               </Flex>
             </Stack>

@@ -40,6 +40,24 @@ export const BounceBox = ({ children, ...props }: BoxProps) => {
   );
 };
 
+export const BounceBoxRepeat = ({ children, ...props }: BoxProps) => {
+  return (
+    <MotionBox
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: false, amount: 0.1 }}
+      transition={{
+        type: "spring",
+        bounce: 0.6,
+        duration: 0.75,
+      }}
+      {...props}
+    >
+      {children}
+    </MotionBox>
+  );
+};
+
 export const FadeBox = ({ children, ...props }: BoxProps) => {
   return (
     <MotionBox
