@@ -1,12 +1,12 @@
 {
   "files": {
     "main.css": "/greenbelt-client/static/css/main.f400bcd4.css",
-    "main.js": "/greenbelt-client/static/js/main.c259eeeb.js",
+    "main.js": "/greenbelt-client/static/js/main.68d7d85b.js",
     "index.html": "/greenbelt-client/index.html",
-    "main.c259eeeb.js.map": "/greenbelt-client/static/js/main.c259eeeb.js.map"
+    "main.68d7d85b.js.map": "/greenbelt-client/static/js/main.68d7d85b.js.map"
   },
   "entrypoints": [
     "static/css/main.f400bcd4.css",
-    "static/js/main.c259eeeb.js"
+    "static/js/main.68d7d85b.js"
   ]
 }
