@@ -10,9 +10,20 @@ import {
   InputLeftElement,
   Stack,
   Textarea,
+  useToast,
 } from "@chakra-ui/react";
 
 export default function Form() {
+  const toast = useToast();
+  const handleSendClick = () => {
+    toast({
+      title: `greenbelt's contact form is currently disabled.`,
+      position: "top",
+      isClosable: true,
+      status: "warning",
+    });
+  };
+
   return (
     <Box>
       <Container
@@ -54,6 +65,7 @@ export default function Form() {
               bg: "green.400",
             }}
             w={"fit-content"}
+            onClick={handleSendClick}
           >
             <ChatIcon />
             &nbsp;Send

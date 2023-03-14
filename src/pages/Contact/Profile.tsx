@@ -83,7 +83,7 @@ export default function Profile() {
                     bgColor: "gray.200",
                   }}
                 >
-                  <PhoneIcon /> 585-451-8105
+                  <PhoneIcon /> 123-456-7890
                 </Text>
               </Flex>
             </Stack>
