@@ -7,31 +7,9 @@ import {
   SimpleGrid,
   Text,
 } from "@chakra-ui/react";
-import { useEffect, useState } from "react";
-import AnimatedNumbers from "react-animated-numbers";
 import { BounceBoxDelay } from "../../components/MotionBox";
 
 export default function TaxDeduction() {
-  const [number, setNumber] = useState(23);
-  useEffect(() => {
-    let timeoutId: any;
-
-    function handleResize() {
-      setNumber(22);
-      clearTimeout(timeoutId);
-      timeoutId = setTimeout(() => {
-        setNumber(23);
-      }, 50);
-    }
-
-    window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-      clearTimeout(timeoutId);
-    };
-  }, []);
-
   return (
     <Box py={20} bgColor={"gray.100"}>
       <Container
@@ -42,14 +20,7 @@ export default function TaxDeduction() {
       >
         <Heading textAlign={"center"} pb={10}>
           <Text fontSize={"6xl"} color={"green.500"}>
-            <Flex display={"inline-flex"}>
-              <AnimatedNumbers
-                includeComma
-                animateToNumber={number}
-                locale="en-US"
-              />
-              %
-            </Flex>
+            <Flex display={"inline-flex"}>23%</Flex>
           </Text>{" "}
           return cost reduction over 3 months with our latest engagement
         </Heading>
