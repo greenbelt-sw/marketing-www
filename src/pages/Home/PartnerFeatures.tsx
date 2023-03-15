@@ -22,7 +22,11 @@ interface CardProps {
 
 const Card = ({ heading, description, icon, href, delay }: CardProps) => {
   return (
-    <BounceBoxDelay noOfLines={delay} shadow={"xl"} h={"max-content"}>
+    <BounceBoxDelay
+      noOfLines={{ base: 0, sm: delay }}
+      shadow={"xl"}
+      h={"max-content"}
+    >
       <Box
         w={{ base: "full", md: "275px" }}
         borderWidth="1px"

@@ -34,7 +34,12 @@ export default function TaxDeduction() {
             return cost reduction over 3 months with our latest engagement
           </Heading>
           <SimpleGrid columns={11}>
-            <GridItem colSpan={5} mx={5}>
+            <GridItem
+              colSpan={5}
+              mx={5}
+              display={"flex"}
+              alignItems={"flex-end"}
+            >
               <BounceBoxDelay noOfLines={0.1}>
                 <Box
                   w={100}
@@ -65,7 +70,12 @@ export default function TaxDeduction() {
                 <Heading>→</Heading>
               </BounceBoxDelay>
             </GridItem>
-            <GridItem colSpan={5} mx={5} display={"flex"}>
+            <GridItem
+              colSpan={5}
+              mx={5}
+              display={"flex"}
+              alignItems={"flex-end"}
+            >
               <BounceBoxDelay noOfLines={0.2}>
                 <Box
                   w={100}
