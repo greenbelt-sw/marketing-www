@@ -96,7 +96,6 @@ const TestimonialAvatar = ({
 
 export default function Benefits() {
   const getDelay = (delay: number): number => {
-    console.log(delay);
     if (window.innerWidth < 768) return 0;
     return delay;
   };

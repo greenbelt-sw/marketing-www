@@ -71,7 +71,6 @@ const Card = ({ heading, description, icon, href, delay }: CardProps) => {
 
 export default function PartnerFeatures() {
   const getDelay = (delay: number): number => {
-    console.log(delay);
     if (window.innerWidth < 768) return 0;
     return delay;
   };

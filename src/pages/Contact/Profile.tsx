@@ -59,7 +59,6 @@ export default function Profile() {
                   rounded={"full"}
                   w={"fit-content"}
                   fontSize={"xs"}
-                  mt={{ base: 1, sm: 0 }}
                   as={"a"}
                   href="mailto:aaron@greenbelt.com"
                   _hover={{
@@ -82,6 +81,7 @@ export default function Profile() {
                   _hover={{
                     bgColor: "gray.200",
                   }}
+                  mt={{ base: 1, sm: 0 }}
                 >
                   <PhoneIcon /> 123-456-7890
                 </Text>
