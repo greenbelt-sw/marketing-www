@@ -14,14 +14,17 @@ import { BounceBoxDelay, LeftBox } from "../../components/MotionBox";
 export default function Cover() {
   return (
     <Box
-      bgImage={process.env.PUBLIC_URL + "/img/forest.webp"}
+      bgImage={{
+        base: "none",
+        sm: process.env.PUBLIC_URL + "/img/forest.webp",
+      }}
       bgSize={"contain"}
       backgroundPosition={"bottom"}
       bgRepeat={"no-repeat"}
     >
       <Box
         bgGradient="linear(to-r, rgba(237, 242, 247, .9), rgba(203, 213, 224, .9))"
-        backdropFilter={"blur(5px)"}
+        backdropFilter={{ base: "none", sm: "blur(5px)" }}
       >
         <Container maxW={"container.lg"} minH={"80vh"} pt={10}>
           <Flex flexDir={"column"} justifyContent={"space-around"} h={"80vh"}>
