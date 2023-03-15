@@ -56,6 +56,11 @@ const SocialButton = ({
 };
 
 export default function Footer() {
+  const handleFooterClick = (e: any) => {
+    window.scrollTo({
+      top: 0,
+    });
+  };
   return (
     <Box bg={"gray.50"} color={"gray.700"}>
       <Container
@@ -68,10 +73,16 @@ export default function Footer() {
       >
         <Logo />
         <Stack direction={"row"} spacing={6}>
-          <Link href={"/greenbelt-client"}>home</Link>
+          <Link href={"/greenbelt-client"} onClick={handleFooterClick}>
+            home
+          </Link>
           <Link href={"#about-us"}>about us</Link>
-          <Link href={"#learn-more"}>learn more</Link>
-          <Link href={"#contact"}>contact</Link>
+          <Link href={"#learn-more"} onClick={handleFooterClick}>
+            learn more
+          </Link>
+          <Link href={"#contact"} onClick={handleFooterClick}>
+            contact
+          </Link>
         </Stack>
       </Container>
 

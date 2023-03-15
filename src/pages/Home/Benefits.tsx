@@ -7,8 +7,6 @@ import {
   Stack,
   Container,
   Icon,
-  SimpleGrid,
-  GridItem,
 } from "@chakra-ui/react";
 import {
   FcBusinessman,
@@ -99,61 +97,61 @@ const TestimonialAvatar = ({
 export default function Benefits() {
   return (
     <Box>
-      <Container maxW={"container.lg"} as={Stack} spacing={12}>
-        <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }}>
-          <GridItem mb={5}>
-            <BounceBoxDelay noOfLines={0.1} w={"fit-content"} m={"auto"}>
-              <Testimonial>
-                <TestimonialContent>
-                  <TestimonialHeading>Cost Friendly</TestimonialHeading>
-                  <TestimonialText>
-                    greenbelt's latest engagement targeted a{" "}
-                    <b>23% reduction</b> in quarterly return costs for an
-                    apparel retailer
-                  </TestimonialText>
-                </TestimonialContent>
-                <TestimonialAvatar
-                  icon={<Icon as={FcBusinessman} w={10} h={10} />}
-                  name={"Benefitting the Company"}
-                />
-              </Testimonial>
-            </BounceBoxDelay>
-          </GridItem>
-          <GridItem mb={5}>
-            <BounceBoxDelay noOfLines={0.3} w={"fit-content"} m={"auto"}>
-              <Testimonial>
-                <TestimonialContent>
-                  <TestimonialHeading>Eco Friendly</TestimonialHeading>
-                  <TestimonialText>
-                    Around <b>17% of retail orders</b> were returned in 2022,
-                    causing notable financial & environmental impacts.
-                  </TestimonialText>
-                </TestimonialContent>
-                <TestimonialAvatar
-                  icon={<Icon as={FcChargeBattery} w={10} h={10} />}
-                  name={"Benefitting the Environment"}
-                />
-              </Testimonial>
-            </BounceBoxDelay>
-          </GridItem>
-          <GridItem>
-            <BounceBoxDelay noOfLines={0.2} w={"fit-content"} m={"auto"}>
-              <Testimonial>
-                <TestimonialContent>
-                  <TestimonialHeading>Resource Friendly</TestimonialHeading>
-                  <TestimonialText>
-                    Around <b>$200 billion</b> worth of merchandise are
-                    destroyed each year. greenbelt helps to reduce this number.
-                  </TestimonialText>
-                </TestimonialContent>
-                <TestimonialAvatar
-                  icon={<Icon as={FcPodiumWithSpeaker} w={10} h={10} />}
-                  name={"Benefitting the Community"}
-                />
-              </Testimonial>
-            </BounceBoxDelay>
-          </GridItem>
-        </SimpleGrid>
+      <Container
+        maxW={"container.lg"}
+        as={Stack}
+        spacing={12}
+        display={"flex"}
+        flexWrap={"wrap"}
+        justifyContent={"center"}
+        alignItems={"flex-end"}
+        flexDir={"row"}
+      >
+        <BounceBoxDelay noOfLines={0.1} w={"fit-content"} m={0}>
+          <Testimonial>
+            <TestimonialContent>
+              <TestimonialHeading>Cost Friendly</TestimonialHeading>
+              <TestimonialText>
+                greenbelt's latest engagement targeted a <b>23% reduction</b> in
+                quarterly return costs for an apparel retailer
+              </TestimonialText>
+            </TestimonialContent>
+            <TestimonialAvatar
+              icon={<Icon as={FcBusinessman} w={10} h={10} />}
+              name={"Benefitting the Company"}
+            />
+          </Testimonial>
+        </BounceBoxDelay>
+        <BounceBoxDelay noOfLines={0.3} w={"fit-content"} m={"auto"}>
+          <Testimonial>
+            <TestimonialContent>
+              <TestimonialHeading>Eco Friendly</TestimonialHeading>
+              <TestimonialText>
+                Around <b>17% of retail orders</b> were returned in 2022,
+                causing notable financial & environmental impacts.
+              </TestimonialText>
+            </TestimonialContent>
+            <TestimonialAvatar
+              icon={<Icon as={FcChargeBattery} w={10} h={10} />}
+              name={"Benefitting the Environment"}
+            />
+          </Testimonial>
+        </BounceBoxDelay>
+        <BounceBoxDelay noOfLines={0.2} w={"fit-content"} m={"auto"}>
+          <Testimonial>
+            <TestimonialContent>
+              <TestimonialHeading>Resource Friendly</TestimonialHeading>
+              <TestimonialText>
+                Around <b>$200 billion</b> worth of merchandise are destroyed
+                each year. greenbelt is helping to reduce this number.
+              </TestimonialText>
+            </TestimonialContent>
+            <TestimonialAvatar
+              icon={<Icon as={FcPodiumWithSpeaker} w={10} h={10} />}
+              name={"Benefitting the Community"}
+            />
+          </Testimonial>
+        </BounceBoxDelay>
       </Container>
     </Box>
   );
