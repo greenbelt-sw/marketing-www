@@ -22,11 +22,7 @@ interface CardProps {
 
 const Card = ({ heading, description, icon, href, delay }: CardProps) => {
   return (
-    <BounceBoxDelay
-      noOfLines={{ base: 0, sm: delay }}
-      shadow={"xl"}
-      h={"max-content"}
-    >
+    <BounceBoxDelay noOfLines={delay} shadow={"xl"} h={"max-content"}>
       <Box
         w={{ base: "full", md: "275px" }}
         borderWidth="1px"
@@ -63,6 +59,11 @@ const Card = ({ heading, description, icon, href, delay }: CardProps) => {
 };
 
 export default function LMStats() {
+  const getDelay = (delay: number): number => {
+    console.log(delay);
+    if (window.innerWidth < 768) return 0;
+    return delay;
+  };
   return (
     <Box p={4}>
       <Container maxW={"container.lg"}>
@@ -79,7 +80,7 @@ export default function LMStats() {
             href={
               "https://www.forbes.com/sites/joanverdon/2022/12/14/816-billion-in-returns-expected-this-year-retail-group-reports/?sh=4f5920b65674"
             }
-            delay={0.1}
+            delay={getDelay(0.1)}
           />
           <Card
             heading={"25%"}
@@ -88,7 +89,7 @@ export default function LMStats() {
             href={
               "https://www.theatlantic.com/magazine/archive/2021/11/free-returns-online-shopping/620169/"
             }
-            delay={0.2}
+            delay={getDelay(0.2)}
           />
         </Flex>
         <Flex mt={6} flexWrap="wrap" gridGap={6} justify="center">
@@ -99,7 +100,7 @@ export default function LMStats() {
             href={
               "https://www.npr.org/2022/01/12/1072066943/from-living-rooms-to-landfills-some-holiday-shopping-returns-take-a-very-sad-pat/"
             }
-            delay={0.3}
+            delay={getDelay(0.3)}
           />
           <Card
             heading={"16 Million"}
@@ -108,7 +109,7 @@ export default function LMStats() {
             href={
               "https://www.chargedretail.co.uk/2022/04/11/returns-are-costing-amazon-billions-of-dollars/"
             }
-            delay={0.4}
+            delay={getDelay(0.4)}
           />
           <Card
             heading={"~$200 Billion"}
@@ -117,7 +118,7 @@ export default function LMStats() {
             href={
               "https://www.cnbc.com/2016/12/16/a-260-billion-ticking-time-bomb-the-costly-business-of-retail-returns.html"
             }
-            delay={0.5}
+            delay={getDelay(0.5)}
           />
         </Flex>
       </Container>

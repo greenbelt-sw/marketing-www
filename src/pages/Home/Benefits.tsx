@@ -95,6 +95,11 @@ const TestimonialAvatar = ({
 };
 
 export default function Benefits() {
+  const getDelay = (delay: number): number => {
+    console.log(delay);
+    if (window.innerWidth < 768) return 0;
+    return delay;
+  };
   return (
     <Box>
       <Container
@@ -107,11 +112,7 @@ export default function Benefits() {
         alignItems={"flex-end"}
         flexDir={"row"}
       >
-        <BounceBoxDelay
-          noOfLines={{ base: 0, sm: 0.1 }}
-          w={"fit-content"}
-          m={0}
-        >
+        <BounceBoxDelay noOfLines={getDelay(0.1)} w={"fit-content"} m={0}>
           <Testimonial>
             <TestimonialContent>
               <TestimonialHeading>Cost Friendly</TestimonialHeading>
@@ -126,11 +127,7 @@ export default function Benefits() {
             />
           </Testimonial>
         </BounceBoxDelay>
-        <BounceBoxDelay
-          noOfLines={{ base: 0, sm: 0.3 }}
-          w={"fit-content"}
-          m={"auto"}
-        >
+        <BounceBoxDelay noOfLines={getDelay(0.3)} w={"fit-content"} m={"auto"}>
           <Testimonial>
             <TestimonialContent>
               <TestimonialHeading>Eco Friendly</TestimonialHeading>
@@ -145,11 +142,7 @@ export default function Benefits() {
             />
           </Testimonial>
         </BounceBoxDelay>
-        <BounceBoxDelay
-          noOfLines={{ base: 0, sm: 0.2 }}
-          w={"fit-content"}
-          m={"auto"}
-        >
+        <BounceBoxDelay noOfLines={getDelay(0.2)} w={"fit-content"} m={"auto"}>
           <Testimonial>
             <TestimonialContent>
               <TestimonialHeading>Resource Friendly</TestimonialHeading>

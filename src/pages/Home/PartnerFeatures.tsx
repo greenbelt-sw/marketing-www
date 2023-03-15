@@ -22,11 +22,7 @@ interface CardProps {
 
 const Card = ({ heading, description, icon, href, delay }: CardProps) => {
   return (
-    <BounceBoxDelay
-      noOfLines={{ base: 0, sm: delay }}
-      shadow={"xl"}
-      h={"max-content"}
-    >
+    <BounceBoxDelay noOfLines={delay} shadow={"xl"} h={"max-content"}>
       <Box
         w={{ base: "full", md: "275px" }}
         borderWidth="1px"
@@ -74,6 +70,11 @@ const Card = ({ heading, description, icon, href, delay }: CardProps) => {
 };
 
 export default function PartnerFeatures() {
+  const getDelay = (delay: number): number => {
+    console.log(delay);
+    if (window.innerWidth < 768) return 0;
+    return delay;
+  };
   return (
     <Box p={4}>
       <Container maxW={"container.lg"}>
@@ -85,7 +86,7 @@ export default function PartnerFeatures() {
               "in the Chronicle of Philanthropy’s current annual ranking of the top 400 charities in the United States."
             }
             href={"https://www.delivering-good.org/corporate-partnerships/"}
-            delay={0.1}
+            delay={getDelay(0.1)}
           />
           <Card
             heading={"$2 Billion"}
@@ -94,7 +95,7 @@ export default function PartnerFeatures() {
               "of donated products have been distributed through our network of community partners, serving individuals and families affected by poverty and disaster worldwide."
             }
             href={"https://www.delivering-good.org/about-us/"}
-            delay={0.2}
+            delay={getDelay(0.2)}
           />
           <Card
             heading={"98%"}
@@ -103,7 +104,7 @@ export default function PartnerFeatures() {
               "of revenue dedicated to its charitable program of distributing apparel, accessories, shoes, books and other useful items."
             }
             href={"https://www.delivering-good.org/about-us/"}
-            delay={0.3}
+            delay={getDelay(0.3)}
           />
         </Flex>
       </Container>
