@@ -1,12 +1,12 @@
 {
   "files": {
     "main.css": "/marketing-www/static/css/main.f400bcd4.css",
-    "main.js": "/marketing-www/static/js/main.d937899d.js",
+    "main.js": "/marketing-www/static/js/main.5ec4546a.js",
     "index.html": "/marketing-www/index.html",
-    "main.d937899d.js.map": "/marketing-www/static/js/main.d937899d.js.map"
+    "main.5ec4546a.js.map": "/marketing-www/static/js/main.5ec4546a.js.map"
   },
   "entrypoints": [
     "static/css/main.f400bcd4.css",
-    "static/js/main.d937899d.js"
+    "static/js/main.5ec4546a.js"
   ]
 }
