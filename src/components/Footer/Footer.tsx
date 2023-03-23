@@ -17,7 +17,7 @@ const Logo = (props: any) => {
   return (
     <Flex flex={{ base: 1 }} justify={{ base: "center", md: "start" }}>
       <Text as={"h1"} fontWeight={"700"}>
-        <a href={"/greenbelt-client"}>greenbelt</a>
+        <a href={"/marketing-www"}>greenbelt</a>
       </Text>
     </Flex>
   );
@@ -73,7 +73,7 @@ export default function Footer() {
       >
         <Logo />
         <Stack direction={"row"} spacing={6}>
-          <Link href={"/greenbelt-client"} onClick={handleFooterClick}>
+          <Link href={"/marketing-www"} onClick={handleFooterClick}>
             home
           </Link>
           <Link href={"#about-us"}>about us</Link>

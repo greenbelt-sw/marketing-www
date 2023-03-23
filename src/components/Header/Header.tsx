@@ -32,7 +32,7 @@ export default function Header({ dark }: HeaderProps) {
             display={"flex"}
             alignItems={"center"}
           >
-            <a href={"/greenbelt-client"}>greenbelt</a>
+            <a href={"/marketing-www"}>greenbelt</a>
           </Text>
           <Stack
             direction={"row"}
